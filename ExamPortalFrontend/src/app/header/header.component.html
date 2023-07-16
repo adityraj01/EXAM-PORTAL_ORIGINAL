@@ -1,1 +1,49 @@
-<p>header works!</p>
+<header>
+    <div class="container">
+        <a routerLink="/" class="logo" style="font-family: 'Spicy Rice';
+        font-size: 22px;margin-left:-50px ;">Prayog</a>
+        <!-- <app-search></app-search> -->
+        <nav>
+            <ul>
+                <li>
+                    <a routerLink="/login">Login</a>
+                </li>
+                <li >
+                    <a routerLink="/create-students">SignUp</a>
+                </li>
+                <li class="menu-container">
+                    <li class="menu-container">
+                        <a routerLink="/dashboard"></a>
+                    <div class="menu">
+                        <a routerLink="/profile">Profile</a>
+                        <a routerLink="/orders">Orders</a>
+                        <a (click)="logout()">Logout</a>
+                    </div>
+                </li>
+                <!-- <li>
+                    <a routerLink="/cart-page">Cart</a>
+                </li> -->
+            </ul>
+            <!-- <ul>
+                <li *ngIf="!isAuth">
+                    <a routerLink="/login">Login</a>
+                </li>
+                <li *ngIf="!isAuth">
+                    <a routerLink="/register">SignUp</a>
+                </li>
+                <li class="menu-container">
+                    <li *ngIf="isAuth" class="menu-container">
+                        <a routerLink="/dashboard">{{user.name}}</a>
+                    <div class="menu">
+                        <a routerLink="/profile">Profile</a>
+                        <a routerLink="/orders">Orders</a>
+                        <a (click)="logout()">Logout</a>
+                    </div>
+                </li>
+                <li *ngIf="isAuth">
+                    <a routerLink="/cart-page">Cart<span *ngIf="cartQuantity">{{cartQuantity}}</span></a>
+                </li>
+            </ul> -->
+        </nav>
+    </div>
+</header>
