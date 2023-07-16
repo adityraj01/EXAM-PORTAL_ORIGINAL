@@ -16,5 +16,10 @@ export class StudentService {
     return this.httpClient.get<Student[]>(`${this.baseURL}`);
   }
 
+  createStudent(student:Student):Observable<Object>{
+    console.log(student);
+    return this.httpClient.post<Student[]>(`${this.baseURL}`,student);
+  }
+
   
 }
