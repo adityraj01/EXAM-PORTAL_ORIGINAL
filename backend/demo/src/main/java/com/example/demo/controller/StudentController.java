@@ -61,13 +61,13 @@ public class StudentController {
 		Student updatedStudent = studentRepository.save(student);
 		return ResponseEntity.ok(updatedStudent);
 	}
-//	@PostMapping("/login")
-//    public ResponseEntity<Student> getUserByUserName(@RequestBody String userName) {
-//		Student student = studentService.findUserByUserName(userName);
-//        if (student != null) {
-//            return ResponseEntity.ok(student);
-//        } else {
-//            return ResponseEntity.notFound().build();
-//        }
-//    }
+	@GetMapping("/login/{userName}")
+    public ResponseEntity<Student> getUserByUserName(@PathVariable String userName) {
+		Student student = studentRepository.findByuserName(userName);
+        if (student != null) {
+            return ResponseEntity.ok(student);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
 }
