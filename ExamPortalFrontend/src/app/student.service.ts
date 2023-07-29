@@ -7,7 +7,8 @@ import { Student } from 'src/app/student';
   providedIn: 'root'
 })
 export class StudentService {
-  private baseURL = "http://localhost:8080/api/v2/students";
+  private baseURL = "http://localhost:8080/api/v2";
+
 
   constructor(private httpClient:HttpClient) { }
 
@@ -20,6 +21,27 @@ export class StudentService {
     console.log(student);
     return this.httpClient.post<Student[]>(`${this.baseURL}`,student);
   }
+
+  generateToken(userCredentials:any){
+    return this.httpClient.post(`${this.baseURL}/token`,userCredentials);
+
+  }
+
+  saveStudents(username: any) {
+    debugger;
+    return this.httpClient.get(`${this.baseURL}/login/${username}`);
+  }
+
+  // loginUser(token)
+  // {
+  //   localStorage.setItem("token",token);
+  //   return true;
+  // }
+
+  // isLoggedIn()
+  // {
+  //   let localStorage.getItem
+  // }
 
   
 }
