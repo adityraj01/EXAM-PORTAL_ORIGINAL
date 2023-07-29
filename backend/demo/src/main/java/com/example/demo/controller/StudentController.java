@@ -19,12 +19,13 @@ import com.example.demo.repository.StudentRepository;
 import com.example.demo.service.StudentService;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:56684")
 @RequestMapping("/api/v2")
+@CrossOrigin(origins = "http://localhost:4200")
 public class StudentController {
 	
 	@Autowired
 	private StudentRepository studentRepository;
+	
 	private StudentService studentService;
 	
 	@Autowired
