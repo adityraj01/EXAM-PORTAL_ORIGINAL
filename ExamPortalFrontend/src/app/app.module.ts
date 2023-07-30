@@ -12,8 +12,15 @@ import { HeaderComponent } from './header/header.component';
 import { SearchComponent } from './search/search.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { DefaultButtonComponent } from './partials/default-button/default-button.component';
-import { HomeComponent } from './home/home.component';
-
+import { HomeComponent } from './home/home.component';import { ProfileComponent } from './profile/profile.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import {MatListModule} from '@angular/material/list';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import {MatCardModule} from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { WelcomeComponent } from './welcome/welcome.component';
+import {MatTableModule} from '@angular/material/table';
+import { MatButtonModule } from '@angular/material/button';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,14 +31,23 @@ import { HomeComponent } from './home/home.component';
     SearchComponent,
     LoginPageComponent,
     DefaultButtonComponent,
-    HomeComponent
+    HomeComponent,
+    ProfileComponent,
+    DashboardComponent,
+    SidebarComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatListModule,
+    MatCardModule,
+    MatIconModule,
+    MatTableModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

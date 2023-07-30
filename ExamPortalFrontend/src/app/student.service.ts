@@ -27,7 +27,7 @@ export class StudentService {
 
   }
 
-  saveStudents(username: any) {
+  loginStudents(username: any) {
     debugger;
     return this.httpClient.get(`${this.baseURL}/login/${username}`);
   }

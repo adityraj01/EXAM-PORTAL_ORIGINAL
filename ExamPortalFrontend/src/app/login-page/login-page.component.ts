@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { StudentService } from '../student.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-page',
@@ -16,7 +17,7 @@ export class LoginPageComponent implements OnInit{
     password:''
   }
 
-  constructor(private formBuilder:FormBuilder,private studentSer:StudentService){}
+  constructor(private formBuilder:FormBuilder,private studentSer:StudentService,private router:Router){}
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
       username:['',[Validators.required]],
@@ -40,20 +41,15 @@ export class LoginPageComponent implements OnInit{
       var userName = `${this.fc['username'].value}`;
       var password = `${this.fc['password'].value}`;
       console.log(userName,password);
-
-      // this.studentSer.generateToken(this.userCredentials).subscribe(
-      //   response=>{
-      //     console.log(response);
-      //   },
-      //   Error=>{
-      //     console.log(Error);
-      //   }
-        
-      // )
-      console.log(userName);
-      this.studentSer.saveStudents(userName).subscribe(
-        response=>{
-          console.log(response);
+      this.studentSer.loginStudents(userName).subscribe(
+        (response)=>{
+          const studentDetails = response;
+    
+          // Store student details in localStorage
+          localStorage.setItem('studentDetails', JSON.stringify(studentDetails));
+          
+          console.log(studentDetails)
+          this.router.navigate(['/dashboard']);
         },
         Error=>{
           console.log(Error);
