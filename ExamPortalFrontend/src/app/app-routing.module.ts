@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { StudentListComponent } from './student-list/student-list.component';
-import { CreateStudentComponent } from './create-student/create-student.component';
-import { UpdateStudentsComponent } from './update-students/update-students.component';
-import { LoginPageComponent } from './login-page/login-page.component';
-import { HomeComponent } from './home/home.component';
-import { ProfileComponent } from './profile/profile.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { WelcomeComponent } from './welcome/welcome.component';
+import { StudentListComponent } from './components/student-list/student-list.component';
+import { CreateStudentComponent } from './components/create-student/create-student.component';
+import { UpdateStudentsComponent } from './components/update-students/update-students.component';
+import { LoginPageComponent } from './components/login-page/login-page.component';
+import { HomeComponent } from './components/home/home.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
 
 
 const routes: Routes = [

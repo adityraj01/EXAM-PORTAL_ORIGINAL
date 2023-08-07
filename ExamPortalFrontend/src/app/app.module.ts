@@ -3,24 +3,25 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { StudentListComponent } from './student-list/student-list.component';
+import { StudentListComponent } from './components/student-list/student-list.component';
 import {HttpClientModule} from '@angular/common/http';
-import { CreateStudentComponent } from './create-student/create-student.component';
+import { CreateStudentComponent } from './components/create-student/create-student.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { UpdateStudentsComponent } from './update-students/update-students.component';
-import { HeaderComponent } from './header/header.component';
-import { SearchComponent } from './search/search.component';
-import { LoginPageComponent } from './login-page/login-page.component';
+import { UpdateStudentsComponent } from './components/update-students/update-students.component';
+import { HeaderComponent } from './components/header/header.component';
+import { SearchComponent } from './components/search/search.component';
+import { LoginPageComponent } from './components/login-page/login-page.component';
 import { DefaultButtonComponent } from './partials/default-button/default-button.component';
-import { HomeComponent } from './home/home.component';import { ProfileComponent } from './profile/profile.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { HomeComponent } from './components/home/home.component';import { ProfileComponent } from './components/profile/profile.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 import {MatListModule} from '@angular/material/list';
-import { SidebarComponent } from './sidebar/sidebar.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 import {MatCardModule} from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
-import { WelcomeComponent } from './welcome/welcome.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
 import {MatTableModule} from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
+
 @NgModule({
   declarations: [
     AppComponent,
