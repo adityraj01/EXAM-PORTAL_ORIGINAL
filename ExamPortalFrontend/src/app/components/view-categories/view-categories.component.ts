@@ -1,10 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-view-categories',
   templateUrl: './view-categories.component.html',
   styleUrls: ['./view-categories.component.css']
 })
-export class ViewCategoriesComponent {
+export class ViewCategoriesComponent implements OnInit{
+  ngOnInit(): void {
+  }
+  Categories = [
+    {
+      cid:1,
+      title:'djdsk',
+      description:'jkkh'
+    }
+  ]
 
 }

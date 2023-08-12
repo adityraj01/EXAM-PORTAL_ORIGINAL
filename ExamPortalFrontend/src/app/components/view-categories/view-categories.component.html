@@ -1,1 +1,11 @@
-<p>view-categories works!</p>
+<mat-card>
+    <mat-list>
+        <div mat-subheader>All Categories</div>
+        <mat-list-item *ngFor = "let c of Categories" style="height:100px">
+            <mat-icon mat-list-icon >folder</mat-icon>
+            <div mat-line>{{c.title}}</div>
+            <div mat-line>{{c.description}}</div>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+    </mat-list>
+</mat-card>
