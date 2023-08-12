@@ -21,6 +21,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import {MatTableModule} from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
+import { ViewCategoriesComponent } from './components/view-categories/view-categories.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { MatButtonModule } from '@angular/material/button';
     ProfileComponent,
     DashboardComponent,
     SidebarComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    ViewCategoriesComponent
   ],
   imports: [
     BrowserModule,
