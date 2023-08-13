@@ -26,7 +26,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { AddCategoriesComponent } from './components/add-categories/add-categories.component';
 import {MatInputModule} from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,7 +59,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatDividerModule,
     MatFormFieldModule,
     MatInputModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

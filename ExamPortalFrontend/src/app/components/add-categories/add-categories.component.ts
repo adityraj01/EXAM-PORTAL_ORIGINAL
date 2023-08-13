@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CategoryService } from 'src/app/service/category.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 @Component({
   selector: 'app-add-categories',
   templateUrl: './add-categories.component.html',
@@ -10,16 +11,18 @@ export class AddCategoriesComponent implements OnInit{
     title:'',
     description:'',
   };
-  constructor(private _category:CategoryService){}
+  constructor(private _category:CategoryService,private snackBar: MatSnackBar){}
   ngOnInit(): void {}
   formSubmit(){
     debugger;
     if(this.category.title.trim()=='' || this.category.title==null){
-      console.log("titile is empty");
+      this.snackBar.open('Title Required !!', '', {
+        duration: 3000,
+      });
       return;
     }
     this._category.addCategory(this.category).subscribe((data:any)=>{
-      console.log('added successfully');
+
       },
       (error)=>{
         console.log(error);
