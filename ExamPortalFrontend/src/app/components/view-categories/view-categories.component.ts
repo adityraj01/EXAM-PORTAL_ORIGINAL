@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CategoryService } from 'src/app/service/category.service';
 
 @Component({
   selector: 'app-view-categories',
@@ -6,14 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./view-categories.component.css']
 })
 export class ViewCategoriesComponent implements OnInit{
-  ngOnInit(): void {
-  }
-  Categories = [
-    {
-      cid:1,
-      title:'djdsk',
-      description:'jkkh'
-    }
-  ]
+  Categories: any[] = []; // Initialize Categories as an array
 
+  constructor(private category: CategoryService) {} // Inject the service
+
+  ngOnInit(): void {
+    this.category.categories().subscribe(
+      (data: any) => {
+        this.Categories = data;
+        console.log(this.Categories);
+      },
+      (error: any) => {
+        console.error('Error fetching categories:', error);
+      }
+    );
+  }
 }
