@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StudentListComponent } from './components/student-list/student-list.component';
@@ -22,6 +22,10 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
 import {MatTableModule} from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { ViewCategoriesComponent } from './components/view-categories/view-categories.component';
+import { MatDividerModule } from '@angular/material/divider';
+import { AddCategoriesComponent } from './components/add-categories/add-categories.component';
+import {MatInputModule} from '@angular/material/input';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -38,7 +42,8 @@ import { ViewCategoriesComponent } from './components/view-categories/view-categ
     DashboardComponent,
     SidebarComponent,
     WelcomeComponent,
-    ViewCategoriesComponent
+    ViewCategoriesComponent,
+    AddCategoriesComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +55,11 @@ import { ViewCategoriesComponent } from './components/view-categories/view-categ
     MatCardModule,
     MatIconModule,
     MatTableModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDividerModule,
+    MatFormFieldModule,
+    MatInputModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

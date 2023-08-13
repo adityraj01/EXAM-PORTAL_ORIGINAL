@@ -9,7 +9,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { ViewCategoriesComponent } from './components/view-categories/view-categories.component';
-
+import { AddCategoriesComponent } from './components/add-categories/add-categories.component';
 
 const routes: Routes = [
   { path: 'students', component: StudentListComponent },
@@ -32,6 +32,10 @@ const routes: Routes = [
       {
         path:'categories',
         component:ViewCategoriesComponent
+      },
+      {
+        path:'add-categories',
+        component:AddCategoriesComponent
       }
     ] 
   }
