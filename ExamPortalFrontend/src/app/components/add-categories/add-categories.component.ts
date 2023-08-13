@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CategoryService } from 'src/app/service/category.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-add-categories',
   templateUrl: './add-categories.component.html',
@@ -22,10 +23,13 @@ export class AddCategoriesComponent implements OnInit{
       return;
     }
     this._category.addCategory(this.category).subscribe((data:any)=>{
-
+      this.category.title = '';
+      this.category.description = '';
+      Swal.fire('Success !!','Category added successfully','success');
       },
       (error)=>{
         console.log(error);
+        Swal.fire('Error !!','Server Error !!','error');
       }
     );
   }
