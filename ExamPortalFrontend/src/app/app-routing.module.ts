@@ -10,6 +10,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { ViewCategoriesComponent } from './components/view-categories/view-categories.component';
 import { AddCategoriesComponent } from './components/add-categories/add-categories.component';
+import { ViewQuizzesComponent } from './components/view-quizzes/view-quizzes.component';
+import { AddQuizComponent } from './add-quiz/add-quiz.component';
 
 const routes: Routes = [
   { path: 'students', component: StudentListComponent },
@@ -36,6 +38,14 @@ const routes: Routes = [
       {
         path:'add-categories',
         component:AddCategoriesComponent
+      },
+      {
+        path:'quizzes',
+        component:ViewQuizzesComponent
+      },
+      {
+        path:'add-quiz',
+        component:AddQuizComponent
       }
     ] 
   }
