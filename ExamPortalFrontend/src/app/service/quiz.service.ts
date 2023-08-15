@@ -16,4 +16,10 @@ export class QuizService {
   public addQuiz(quiz: any): Observable<any>{
     return this._http.post(`${this.baseUrl}/quiz/`, quiz);
   }
+
+  public deleteQuiz(qId : any){
+    debugger;
+    console.log(qId);
+    return this._http.delete(`${this.baseUrl}/quiz/${qId}`);
+  }
 }
