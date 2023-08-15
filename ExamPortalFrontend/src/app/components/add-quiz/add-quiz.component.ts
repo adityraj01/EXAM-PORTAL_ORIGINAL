@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { CategoryService } from '../service/category.service';
+import { CategoryService } from '../../service/category.service';
 import Swal from 'sweetalert2';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { QuizService } from '../service/quiz.service';
+import { QuizService } from '../../service/quiz.service';
 
 interface Category {
   cid: number;
