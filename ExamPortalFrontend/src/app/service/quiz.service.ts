@@ -27,11 +27,13 @@ export class QuizService {
 
   //get the single quiz
   public getQuiz(qId : any){
+    debugger;
     return this._http.get(`${this.baseUrl}/quiz/${qId}`);
   }
 
   //updateQuiz
   public updateQuiz(quiz : any){
+    debugger;
     return this._http.put(`${this.baseUrl}/quiz/`, quiz);
   }
 
