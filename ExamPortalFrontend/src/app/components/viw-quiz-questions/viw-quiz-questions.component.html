@@ -1,0 +1,33 @@
+<h1 class="mt20">Questions For {{qTitle}}</h1>
+
+<div class="bootstrap-wrapper">
+    <div class="row">
+        <div class="col-md-12">
+            <mat-card *ngFor="let q of questionsList; let i = index" class="mt20">
+                <mat-card-content>
+                    <p> <b>Q{{i+1}}</b><span class="ml20" [innerHTML]="q.content"></span></p>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>1) {{ q.option1}}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p>2) {{ q.option2}}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p>3) {{ q.option3}}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p>4) {{ q.option4}}</p>
+                            </div>
+                        </div>
+                        <mat-divider></mat-divider>
+                        <p class="mt20">
+                            <b>Correct Answer: </b>{{q.answer}}
+                        </p>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>
