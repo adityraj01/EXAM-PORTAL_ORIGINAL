@@ -3,14 +3,14 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 offset-md-2">
-                <form *ngIf = "quiz" (ngSubmit) = "updateData()">
+                <form *ngIf = "quiz" (ngSubmit) = "updateData(quiz)">
                     <mat-form-field class="w100" appearnace="fill">
                         <mat-label>Enter Title</mat-label>
                         <input [(ngModel)] ="quiz.title"  type="text" name="title" placeholder="Enter here"  required matInput/>
                     </mat-form-field>
                     <mat-form-field class="w100" appearnace="fill">
                         <mat-label>Enter Description</mat-label>
-                        <textarea [(ngModel)] ="quiz.description" type="text" name="title" placeholder="Enter here" matInput rows="5"></textarea>
+                        <textarea [(ngModel)] ="quiz.description" type="text" name="description" placeholder="Enter here" matInput rows="5"></textarea>
                     </mat-form-field>
                     <div class="row">
                         <div class="col-md-6">
@@ -35,7 +35,7 @@
                     <mat-form-field appearance="fill" class="mt10 w100">
                         <mat-label>Category</mat-label>
                         <mat-select name="category" [(ngModel)]="quiz.category.cid">
-                          <mat-option *ngFor="let c of categories" [value]="c">
+                          <mat-option *ngFor="let c of categories" [value]="c.cid">
                             {{ c.title }}
                           </mat-option>
                         </mat-select>
@@ -50,3 +50,5 @@
         </div>
     </div>
 </mat-card>
+
+{{quiz|json}}

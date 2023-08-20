@@ -46,17 +46,17 @@ export class UpdateQuizComponent implements OnInit{
       (data:any)=>{
         //categories load
         this.categories = data;
-        console.log(this.categories);
       },
       (error)=>{
-        console.log(error);
         Swal.fire('Error !!','Server Error !!','error');
       }
     );
   }
 
-  public updateData(){
-    this._quiz.updateQuiz(this._quiz).subscribe((data)=>{
+  public updateData(quiz:any){
+    console.log(quiz);
+    debugger;
+    this._quiz.updateQuiz(quiz).subscribe((data)=>{
       Swal.fire("Success !!",'quiz updated','success');
     },(error)=>{
       Swal.fire("Error !!",'error in updatig quiz','error'); 
