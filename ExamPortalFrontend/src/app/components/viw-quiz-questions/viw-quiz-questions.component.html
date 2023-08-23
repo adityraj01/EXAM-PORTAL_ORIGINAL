@@ -30,6 +30,10 @@
                         </p>
                     </div>
                 </mat-card-content>
+                <mat-card-actions>
+                    <button mat-button (click)="deleteQuestion(q.quesId)" color="warn"><b>Delete</b></button>
+                    <button mat-button color="primary"><b>Update</b></button>
+                </mat-card-actions>
             </mat-card>
         </div>
     </div>
