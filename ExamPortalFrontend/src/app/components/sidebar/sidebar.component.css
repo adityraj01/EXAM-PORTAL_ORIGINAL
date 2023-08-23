@@ -3,3 +3,36 @@
   mat-icon {
     margin-top: 8px; 
    }
+
+  .example-header-image1 {
+    background-image: url("/assets/home.jpg");
+    background-size: cover;
+  }
+  .example-header-image2 {
+    background-image: url("/assets/profile.jpg");
+    background-size: cover;
+  }
+  .example-header-image3 {
+    background-image: url("/assets/categories.jpg");
+    background-size: cover;
+  }
+  .example-header-image4 {
+    background-image: url("/assets/add-categories.jpg");
+    background-size: cover;
+  }
+  .example-header-image5 {
+    background-image: url("/assets/quiz.jpg");
+    background-size: cover;
+  }
+  .example-header-image6 {
+    background-image: url("/assets/add-quiz.jpg");
+    background-size: cover;
+  }
+  .example-header-image7 {
+    background-image: url("/assets/create-notes.jpg");
+    background-size: cover;
+  }
+  .example-header-image8 {
+    background-image: url("/assets/add-categories.png");
+    background-size: cover;
+  }

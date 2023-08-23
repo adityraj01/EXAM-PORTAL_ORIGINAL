@@ -34,6 +34,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { UpdateQuizComponent } from './components/update-quiz/update-quiz.component';
 import { ViwQuizQuestionsComponent } from './components/viw-quiz-questions/viw-quiz-questions.component';
 import { AddQuestionsComponent } from './components/add-questions/add-questions.component';
+import { CreateNotesComponent } from './components/create-notes/create-notes.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,7 +56,8 @@ import { AddQuestionsComponent } from './components/add-questions/add-questions.
     AddQuizComponent,
     UpdateQuizComponent,
     ViwQuizQuestionsComponent,
-    AddQuestionsComponent
+    AddQuestionsComponent,
+    CreateNotesComponent
   ],
   imports: [
     BrowserModule,
