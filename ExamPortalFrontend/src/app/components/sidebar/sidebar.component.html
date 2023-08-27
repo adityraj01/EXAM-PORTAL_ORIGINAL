@@ -1,36 +1,66 @@
-<mat-card >
-    <mat-action-list >
-        <mat-card-header>
-            <div mat-card-avatar class="example-header-image1"></div>
-            <span style="margin:10 10 0 10" routerLink="/dashboard"><h3><b>Home</b></h3></span>
-          </mat-card-header>
-          <mat-card-header>
-            <div mat-card-avatar class="example-header-image2"></div>
-            <span style="margin:10px" routerLink="/dashboard/profile"><h3><b>Profile</b></h3></span>
-          </mat-card-header>
-          <mat-card-header>
-            <div mat-card-avatar class="example-header-image3"></div>
-            <span style="margin:10px" routerLink="/dashboard/categories"><h3><b>Categories</b></h3></span>
-          </mat-card-header>
-          <mat-card-header>
-            <div mat-card-avatar class="example-header-image4"></div>
-            <span style="margin:10px" routerLink="/dashboard/add-categories"><h3><b>Add Categories</b></h3></span>
-          </mat-card-header>
-          <mat-card-header>
-            <div mat-card-avatar class="example-header-image5"></div>
-            <span style="margin:10px" routerLink="/dashboard/quizzes"><h3><b>Quizzes</b></h3></span>
-          </mat-card-header>
-          <mat-card-header>
-            <div mat-card-avatar class="example-header-image6"></div>
-            <span style="margin:10px" routerLink="/dashboard/add-quiz"><h3><b>Add Quiz</b></h3></span>
-          </mat-card-header>
-          <mat-card-header>
-            <div mat-card-avatar class="example-header-image7"></div>
-            <span style="margin:10px" routerLink="/dashboard/add-quiz"><h3><b>Create Notes</b></h3></span>
-          </mat-card-header>
-          <mat-card-header>
-            <div mat-card-avatar class="example-header-image8"></div>
-            <span style="margin:10px"><h3><b>Logout</b></h3></span>
-          </mat-card-header>
-    </mat-action-list>
+<mat-card>
+  <mat-action-list>
+    <!-- Home -->
+    <mat-card-header>
+      <button mat-card-avatar class="example-header-image1 commonClass" routerLink="/dashboard">
+        <div class="button-content">
+          <h3><b>Home</b></h3>
+        </div>
+      </button>
+    </mat-card-header>
+
+    <!-- Profile -->
+    <mat-card-header>
+      <button mat-card-avatar class="example-header-image2 commonClass" routerLink="/dashboard/profile">
+        <div class="button-content">
+          <h3><b>Profile</b></h3>
+        </div>
+      </button>
+    </mat-card-header>
+
+    <!-- Other menu items... -->
+    <mat-card-header>
+      <button mat-card-avatar class="example-header-image3 commonClass" routerLink="/dashboard/categories">
+        <div class="button-content">
+          <h3><b>Categories</b></h3>
+        </div>
+      </button>
+    </mat-card-header>
+    <mat-card-header>
+      <button mat-card-avatar class="example-header-image4 commonClass" routerLink="/dashboard/add-categories">
+        <div class="button-content" style="margin-left:40px;width:113px">
+          <h3><b>Add Categories</b></h3>
+        </div>
+      </button>
+    </mat-card-header>
+    <mat-card-header>
+      <button mat-card-avatar class="example-header-image5 commonClass" routerLink="/dashboard/quizzes">
+        <div class="button-content">
+          <h3><b>Quizzes</b></h3>
+        </div>
+      </button>
+    </mat-card-header>
+    <mat-card-header>
+      <button mat-card-avatar  class="example-header-image6 commonClass" routerLink="/dashboard/add-quiz">
+        <div class="button-content" style="margin-left:15px;width:113px">
+          <h3><b>Add Quiz</b></h3>
+        </div>
+      </button>
+    </mat-card-header>
+    <mat-card-header>
+      <button mat-card-avatar class="example-header-image7 commonClass" routerLink="/dashboard/createNotes">
+        <div class="button-content" style="margin-left:20px;width:113px">
+          <h3><b>Create Notes</b></h3>
+        </div>
+      </button>
+    </mat-card-header>
+    <mat-card-header>
+      <button mat-card-avatar class="example-header-image8 commonClass" routerLink="/dashboard/profile">
+        <div class="button-content">
+          <h3><b>Logout</b></h3>
+        </div>
+      </button>
+    </mat-card-header>
+
+  </mat-action-list>
 </mat-card>

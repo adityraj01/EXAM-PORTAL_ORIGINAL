@@ -15,6 +15,7 @@ import { AddQuizComponent } from './components/add-quiz/add-quiz.component';
 import { UpdateQuizComponent } from './components/update-quiz/update-quiz.component';
 import { ViwQuizQuestionsComponent } from './components/viw-quiz-questions/viw-quiz-questions.component';
 import { AddQuestionsComponent } from './components/add-questions/add-questions.component';
+import { CreateNotesComponent } from './components/create-notes/create-notes.component';
 
 const routes: Routes = [
   { path: 'students', component: StudentListComponent },
@@ -61,6 +62,10 @@ const routes: Routes = [
       {
         path:'add-question/:qid/:qTitle',
         component:AddQuestionsComponent
+      },
+      {
+        path:'createNotes',
+        component:CreateNotesComponent
       }
     ] 
   }
