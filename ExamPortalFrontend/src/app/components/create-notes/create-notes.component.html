@@ -1,8 +1,9 @@
 <!-- app.component.html -->
 <mat-card>
     <h1 style="text-align: center;"><b>Create Your Customized Notes Here</b></h1>
-    <ckeditor [editor]="Editor" style="height: 200px;"></ckeditor>
-    
+    <div class="ckeditor-container">
+        <ckeditor [editor]="Editor" style="height: 200px;"></ckeditor>
+    </div>
 </mat-card>
 
 <div class="container text-center" style="margin-top: 20px;">
