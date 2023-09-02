@@ -35,6 +35,7 @@ import { UpdateQuizComponent } from './components/update-quiz/update-quiz.compon
 import { ViwQuizQuestionsComponent } from './components/viw-quiz-questions/viw-quiz-questions.component';
 import { AddQuestionsComponent } from './components/add-questions/add-questions.component';
 import { CreateNotesComponent } from './components/create-notes/create-notes.component';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 @NgModule({
   declarations: [
     AppComponent,
@@ -76,7 +77,8 @@ import { CreateNotesComponent } from './components/create-notes/create-notes.com
     BrowserAnimationsModule,
     MatSnackBarModule,
     MatSlideToggleModule,
-    MatSelectModule
+    MatSelectModule,
+    CKEditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
